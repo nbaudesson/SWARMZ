@@ -1,0 +1,513 @@
+[0.685s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.686s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f28f00a7f40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f28f00a79d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f28f00a79d0>>)
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.717s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.725s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extension 'ignore_ament_install'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extensions ['colcon_pkg']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extension 'colcon_pkg'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extensions ['colcon_meta']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extension 'colcon_meta'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extensions ['ros']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extension 'ros'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extensions ['cmake', 'python']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extension 'cmake'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extension 'python'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extensions ['python_setup_py']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control) by extension 'python_setup_py'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extension 'ignore'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extension 'ignore_ament_install'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extensions ['colcon_pkg']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extension 'colcon_pkg'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extensions ['colcon_meta']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extension 'colcon_meta'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extensions ['ros']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ROS2_PX4_Velocity_Control/px4_velocity_control) by extension 'ros'
+[0.729s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ROS2_PX4_Velocity_Control/px4_velocity_control' with type 'ros.ament_python' and name 'px4_velocity_control'
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extensions ['ignore', 'ignore_ament_install']
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extension 'ignore'
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extension 'ignore_ament_install'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extensions ['colcon_pkg']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extension 'colcon_pkg'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extensions ['colcon_meta']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extension 'colcon_meta'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extensions ['ros']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_cpp) by extension 'ros'
+[0.730s] DEBUG:colcon.colcon_core.package_identification:Package 'src/acoustics_simulation_cpp' with type 'ros.ament_cmake' and name 'acoustics_simulation_cpp'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extensions ['ignore', 'ignore_ament_install']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extension 'ignore'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extension 'ignore_ament_install'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extensions ['colcon_pkg']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extension 'colcon_pkg'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extensions ['colcon_meta']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extension 'colcon_meta'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extensions ['ros']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/acoustics_simulation_py) by extension 'ros'
+[0.731s] DEBUG:colcon.colcon_core.package_identification:Package 'src/acoustics_simulation_py' with type 'ros.ament_python' and name 'acoustics_simulation_py'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extensions ['ignore', 'ignore_ament_install']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extension 'ignore'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extension 'ignore_ament_install'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extensions ['colcon_pkg']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extension 'colcon_pkg'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extensions ['colcon_meta']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extension 'colcon_meta'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extensions ['ros']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/offboard_control_cpp) by extension 'ros'
+[0.731s] DEBUG:colcon.colcon_core.package_identification:Package 'src/offboard_control_cpp' with type 'ros.ament_cmake' and name 'offboard_control_cpp'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[0.732s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ignore', 'ignore_ament_install']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore_ament_install'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_pkg']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_pkg'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_meta']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_meta'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ros']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ros'
+[0.733s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_ros_com' with type 'ros.ament_cmake' and name 'px4_ros_com'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extensions ['ignore', 'ignore_ament_install']
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extension 'ignore'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extension 'ignore_ament_install'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extensions ['colcon_pkg']
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extension 'colcon_pkg'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extensions ['colcon_meta']
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extension 'colcon_meta'
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extensions ['ros']
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(src/swarmz_control_py) by extension 'ros'
+[0.734s] DEBUG:colcon.colcon_core.package_identification:Package 'src/swarmz_control_py' with type 'ros.ament_python' and name 'swarmz_control_py'
+[0.734s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.734s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.734s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.734s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.734s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.798s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.798s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.819s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install
+[0.839s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 274 installed packages in /opt/ros/humble
+[0.840s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'cmake_args' from command line to 'None'
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'cmake_target' from command line to 'None'
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'cmake_clean_cache' from command line to 'False'
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'cmake_clean_first' from command line to 'False'
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'cmake_force_configure' from command line to 'False'
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'ament_cmake_args' from command line to 'None'
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'catkin_cmake_args' from command line to 'None'
+[0.902s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.902s] DEBUG:colcon.colcon_core.verb:Building package 'acoustics_simulation_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py', 'merge_install': False, 'path': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_py', 'symlink_install': False, 'test_result_base': None}
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_args' from command line to 'None'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target' from command line to 'None'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.912s] DEBUG:colcon.colcon_core.verb:Building package 'px4_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs', 'merge_install': False, 'path': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.922s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'cmake_args' from command line to 'None'
+[0.923s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'cmake_target' from command line to 'None'
+[0.923s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.923s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'cmake_clean_cache' from command line to 'False'
+[0.923s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'cmake_clean_first' from command line to 'False'
+[0.923s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'cmake_force_configure' from command line to 'False'
+[0.923s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'ament_cmake_args' from command line to 'None'
+[0.923s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'catkin_cmake_args' from command line to 'None'
+[0.923s] Level 5:colcon.colcon_core.verb:set package 'swarmz_control_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.923s] DEBUG:colcon.colcon_core.verb:Building package 'swarmz_control_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py', 'merge_install': False, 'path': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/swarmz_control_py', 'symlink_install': False, 'test_result_base': None}
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'cmake_args' from command line to 'None'
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'cmake_target' from command line to 'None'
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'cmake_clean_cache' from command line to 'False'
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'cmake_clean_first' from command line to 'False'
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'cmake_force_configure' from command line to 'False'
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'ament_cmake_args' from command line to 'None'
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'catkin_cmake_args' from command line to 'None'
+[0.933s] Level 5:colcon.colcon_core.verb:set package 'acoustics_simulation_cpp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.933s] DEBUG:colcon.colcon_core.verb:Building package 'acoustics_simulation_cpp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp', 'merge_install': False, 'path': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp', 'symlink_install': False, 'test_result_base': None}
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'cmake_args' from command line to 'None'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'cmake_target' from command line to 'None'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'cmake_clean_cache' from command line to 'False'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'cmake_clean_first' from command line to 'False'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'cmake_force_configure' from command line to 'False'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'ament_cmake_args' from command line to 'None'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'catkin_cmake_args' from command line to 'None'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'offboard_control_cpp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.943s] DEBUG:colcon.colcon_core.verb:Building package 'offboard_control_cpp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp', 'merge_install': False, 'path': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/offboard_control_cpp', 'symlink_install': False, 'test_result_base': None}
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_args' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_cache' from command line to 'False'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_first' from command line to 'False'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_force_configure' from command line to 'False'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'ament_cmake_args' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_cmake_args' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.954s] DEBUG:colcon.colcon_core.verb:Building package 'px4_ros_com' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com', 'merge_install': False, 'path': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_ros_com', 'symlink_install': False, 'test_result_base': None}
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'cmake_args' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'cmake_target' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'px4_velocity_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.964s] DEBUG:colcon.colcon_core.verb:Building package 'px4_velocity_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_velocity_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control', 'merge_install': False, 'path': '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/ROS2_PX4_Velocity_Control/px4_velocity_control', 'symlink_install': False, 'test_result_base': None}
+[0.974s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.985s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.985s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_msgs' with build type 'ament_cmake'
+[0.985s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_msgs'
+[0.997s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.997s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.997s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.030s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_py' with build type 'ament_python'
+[1.031s] Level 1:colcon.colcon_core.shell:create_environment_hook('acoustics_simulation_py', 'ament_prefix_path')
+[1.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/hook/ament_prefix_path.ps1'
+[1.041s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/hook/ament_prefix_path.dsv'
+[1.042s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/hook/ament_prefix_path.sh'
+[1.053s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.053s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.084s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/swarmz_control_py' with build type 'ament_python'
+[1.084s] Level 1:colcon.colcon_core.shell:create_environment_hook('swarmz_control_py', 'ament_prefix_path')
+[1.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/hook/ament_prefix_path.ps1'
+[1.094s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/hook/ament_prefix_path.dsv'
+[1.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/hook/ament_prefix_path.sh'
+[1.105s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.106s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.142s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs -- -j8 -l8
+[1.334s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_py'
+[1.353s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.353s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.670s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/swarmz_control_py'
+[1.686s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.687s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.780s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs -- -j8 -l8
+[2.008s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/swarmz_control_py': PYTHONPATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/prefix_override:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swarmz_control_py build --build-base /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/build install --record /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/install.log --single-version-externally-managed
+[2.050s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_py': PYTHONPATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_py/prefix_override:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/acoustics_simulation_py build --build-base /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_py/build install --record /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_py/install.log --single-version-externally-managed
+[2.281s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/swarmz_control_py' returned '0': PYTHONPATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/prefix_override:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swarmz_control_py build --build-base /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/build install --record /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/install.log --single-version-externally-managed
+[2.295s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py' for CMake module files
+[2.295s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py' for CMake config files
+[2.296s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib'
+[2.296s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/bin'
+[2.296s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/pkgconfig/swarmz_control_py.pc'
+[2.296s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/python3.10/site-packages'
+[2.296s] Level 1:colcon.colcon_core.shell:create_environment_hook('swarmz_control_py', 'pythonpath')
+[2.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/hook/pythonpath.ps1'
+[2.309s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/hook/pythonpath.dsv'
+[2.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/hook/pythonpath.sh'
+[2.310s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/bin'
+[2.310s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swarmz_control_py)
+[2.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/package.ps1'
+[2.322s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/package.dsv'
+[2.322s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/package.sh'
+[2.323s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/package.bash'
+[2.323s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/swarmz_control_py/package.zsh'
+[2.324s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/share/colcon-core/packages/swarmz_control_py)
+[2.326s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_py' returned '0': PYTHONPATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_py/prefix_override:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/acoustics_simulation_py build --build-base /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_py/build install --record /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_py/install.log --single-version-externally-managed
+[2.337s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py' for CMake module files
+[2.338s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py' for CMake config files
+[2.338s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/lib'
+[2.338s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/bin'
+[2.338s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/lib/pkgconfig/acoustics_simulation_py.pc'
+[2.338s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/lib/python3.10/site-packages'
+[2.338s] Level 1:colcon.colcon_core.shell:create_environment_hook('acoustics_simulation_py', 'pythonpath')
+[2.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/hook/pythonpath.ps1'
+[2.351s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/hook/pythonpath.dsv'
+[2.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/hook/pythonpath.sh'
+[2.351s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/bin'
+[2.352s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(acoustics_simulation_py)
+[2.364s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/package.ps1'
+[2.365s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/package.dsv'
+[2.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/package.sh'
+[2.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/package.bash'
+[2.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/acoustics_simulation_py/package.zsh'
+[2.366s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py/share/colcon-core/packages/acoustics_simulation_py)
+[4.400s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs
+[4.578s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[4.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_msgs
+[4.589s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs' for CMake module files
+[4.589s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs' for CMake config files
+[4.589s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[4.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[4.600s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[4.600s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[4.600s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib'
+[4.600s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[4.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[4.611s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[4.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[4.611s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/bin'
+[4.611s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[4.611s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib/python3.10/site-packages'
+[4.611s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/bin'
+[4.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.ps1'
+[4.624s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.dsv'
+[4.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.sh'
+[4.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.bash'
+[4.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.zsh'
+[4.625s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[7.200s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[7.209s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs' for CMake module files
+[7.210s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs' for CMake config files
+[7.210s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[7.220s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[7.221s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[7.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[7.221s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib'
+[7.221s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[7.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[7.232s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[7.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[7.232s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/bin'
+[7.232s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[7.232s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib/python3.10/site-packages'
+[7.233s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/bin'
+[7.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.ps1'
+[7.243s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.dsv'
+[7.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.sh'
+[7.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.bash'
+[7.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/package.zsh'
+[7.244s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[7.244s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp' with build type 'ament_cmake'
+[7.245s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp'
+[7.255s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.255s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.297s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/offboard_control_cpp' with build type 'ament_cmake'
+[7.297s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/offboard_control_cpp'
+[7.308s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.308s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.341s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_ros_com' with build type 'ament_cmake'
+[7.341s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_ros_com'
+[7.352s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.353s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.385s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/ROS2_PX4_Velocity_Control/px4_velocity_control' with build type 'ament_python'
+[7.385s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_velocity_control', 'ament_prefix_path')
+[7.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/hook/ament_prefix_path.ps1'
+[7.399s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/hook/ament_prefix_path.dsv'
+[7.399s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/hook/ament_prefix_path.sh'
+[7.410s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.410s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.446s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp -- -j8 -l8
+[7.448s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp -- -j8 -l8
+[7.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com -- -j8 -l8
+[7.660s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/ROS2_PX4_Velocity_Control/px4_velocity_control'
+[7.672s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.672s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.707s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp -- -j8 -l8
+[7.707s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com -- -j8 -l8
+[7.708s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp -- -j8 -l8
+[7.725s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp
+[7.727s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp
+[7.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(acoustics_simulation_cpp)
+[7.737s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp
+[7.748s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp' for CMake module files
+[7.749s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp' for CMake config files
+[7.749s] Level 1:colcon.colcon_core.shell:create_environment_hook('acoustics_simulation_cpp', 'cmake_prefix_path')
+[7.760s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/hook/cmake_prefix_path.ps1'
+[7.760s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/hook/cmake_prefix_path.dsv'
+[7.760s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/hook/cmake_prefix_path.sh'
+[7.761s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/lib'
+[7.761s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/bin'
+[7.761s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/lib/pkgconfig/acoustics_simulation_cpp.pc'
+[7.761s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/lib/python3.10/site-packages'
+[7.761s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/bin'
+[7.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.ps1'
+[7.772s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.dsv'
+[7.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.sh'
+[7.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.bash'
+[7.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.zsh'
+[7.773s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/colcon-core/packages/acoustics_simulation_cpp)
+[7.774s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(offboard_control_cpp)
+[7.775s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/offboard_control_cpp
+[7.786s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp' for CMake module files
+[7.786s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp' for CMake config files
+[7.786s] Level 1:colcon.colcon_core.shell:create_environment_hook('offboard_control_cpp', 'cmake_prefix_path')
+[7.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/hook/cmake_prefix_path.ps1'
+[7.798s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/hook/cmake_prefix_path.dsv'
+[7.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/hook/cmake_prefix_path.sh'
+[7.798s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/lib'
+[7.798s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/bin'
+[7.798s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/lib/pkgconfig/offboard_control_cpp.pc'
+[7.798s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/lib/python3.10/site-packages'
+[7.798s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/bin'
+[7.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.ps1'
+[7.810s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.dsv'
+[7.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.sh'
+[7.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.bash'
+[7.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.zsh'
+[7.811s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/colcon-core/packages/offboard_control_cpp)
+[7.813s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com
+[7.836s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(acoustics_simulation_cpp)
+[7.856s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp' for CMake module files
+[7.857s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp' for CMake config files
+[7.857s] Level 1:colcon.colcon_core.shell:create_environment_hook('acoustics_simulation_cpp', 'cmake_prefix_path')
+[7.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/hook/cmake_prefix_path.ps1'
+[7.870s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/hook/cmake_prefix_path.dsv'
+[7.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/hook/cmake_prefix_path.sh'
+[7.871s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/lib'
+[7.871s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/bin'
+[7.871s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/lib/pkgconfig/acoustics_simulation_cpp.pc'
+[7.871s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/lib/python3.10/site-packages'
+[7.871s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/bin'
+[7.882s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.ps1'
+[7.882s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.dsv'
+[7.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.sh'
+[7.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.bash'
+[7.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.zsh'
+[7.884s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/colcon-core/packages/acoustics_simulation_cpp)
+[7.895s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(offboard_control_cpp)
+[7.906s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp' for CMake module files
+[7.906s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp' for CMake config files
+[7.906s] Level 1:colcon.colcon_core.shell:create_environment_hook('offboard_control_cpp', 'cmake_prefix_path')
+[7.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/hook/cmake_prefix_path.ps1'
+[7.918s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/hook/cmake_prefix_path.dsv'
+[7.918s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/hook/cmake_prefix_path.sh'
+[7.918s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/lib'
+[7.918s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/bin'
+[7.919s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/lib/pkgconfig/offboard_control_cpp.pc'
+[7.919s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/lib/python3.10/site-packages'
+[7.919s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/bin'
+[7.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.ps1'
+[7.931s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.dsv'
+[7.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.sh'
+[7.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.bash'
+[7.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/offboard_control_cpp/package.zsh'
+[7.932s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp/share/colcon-core/packages/offboard_control_cpp)
+[7.932s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[7.933s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com
+[7.948s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com' for CMake module files
+[7.948s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com' for CMake config files
+[7.948s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[7.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[7.960s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[7.960s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[7.960s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib'
+[7.961s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[7.971s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[7.972s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[7.972s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[7.972s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/bin'
+[7.972s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[7.972s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/python3.10/site-packages'
+[7.973s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/bin'
+[7.983s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[7.984s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[7.984s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.sh'
+[7.985s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.bash'
+[7.985s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[7.985s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[8.000s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/ROS2_PX4_Velocity_Control/px4_velocity_control': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_velocity_control/prefix_override:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/px4_velocity_control build --build-base /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_velocity_control/build install --record /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_velocity_control/install.log --single-version-externally-managed
+[8.024s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[8.036s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com' for CMake module files
+[8.036s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com' for CMake config files
+[8.036s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[8.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[8.048s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[8.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[8.048s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib'
+[8.048s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[8.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[8.059s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[8.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[8.060s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/bin'
+[8.060s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[8.060s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/python3.10/site-packages'
+[8.060s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/bin'
+[8.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[8.072s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[8.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.sh'
+[8.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.bash'
+[8.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[8.073s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[8.245s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/ROS2_PX4_Velocity_Control/px4_velocity_control' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_velocity_control/prefix_override:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/px4_velocity_control build --build-base /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_velocity_control/build install --record /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_velocity_control/install.log --single-version-externally-managed
+[8.255s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control' for CMake module files
+[8.255s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control' for CMake config files
+[8.256s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/lib'
+[8.256s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/bin'
+[8.256s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/lib/pkgconfig/px4_velocity_control.pc'
+[8.256s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/lib/python3.10/site-packages'
+[8.256s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_velocity_control', 'pythonpath')
+[8.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/hook/pythonpath.ps1'
+[8.266s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/hook/pythonpath.dsv'
+[8.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/hook/pythonpath.sh'
+[8.267s] Level 1:colcon.colcon_core.environment:checking '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/bin'
+[8.267s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_velocity_control)
+[8.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/package.ps1'
+[8.277s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/package.dsv'
+[8.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/package.sh'
+[8.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/package.bash'
+[8.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/px4_velocity_control/package.zsh'
+[8.278s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control/share/colcon-core/packages/px4_velocity_control)
+[8.278s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.278s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.278s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.278s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.292s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.292s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.292s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.301s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.314s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/local_setup.ps1'
+[8.315s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/_local_setup_util_ps1.py'
+[8.316s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/setup.ps1'
+[8.329s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/local_setup.sh'
+[8.330s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/_local_setup_util_sh.py'
+[8.330s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/setup.sh'
+[8.342s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/local_setup.bash'
+[8.343s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/setup.bash'
+[8.355s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/local_setup.zsh'
+[8.355s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/setup.zsh'

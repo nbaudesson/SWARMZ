@@ -1,0 +1,23 @@
+[0.932s] Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/swarmz_control_py': PYTHONPATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/prefix_override:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swarmz_control_py build --build-base /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/build install --record /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/install.log --single-version-externally-managed
+[1.148s] running egg_info
+[1.149s] writing ../../build/swarmz_control_py/swarmz_control_py.egg-info/PKG-INFO
+[1.149s] writing dependency_links to ../../build/swarmz_control_py/swarmz_control_py.egg-info/dependency_links.txt
+[1.149s] writing entry points to ../../build/swarmz_control_py/swarmz_control_py.egg-info/entry_points.txt
+[1.149s] writing requirements to ../../build/swarmz_control_py/swarmz_control_py.egg-info/requires.txt
+[1.149s] writing top-level names to ../../build/swarmz_control_py/swarmz_control_py.egg-info/top_level.txt
+[1.152s] reading manifest file '../../build/swarmz_control_py/swarmz_control_py.egg-info/SOURCES.txt'
+[1.153s] writing manifest file '../../build/swarmz_control_py/swarmz_control_py.egg-info/SOURCES.txt'
+[1.153s] running build
+[1.153s] running build_py
+[1.153s] running install
+[1.154s] running install_lib
+[1.155s] running install_data
+[1.155s] running install_egg_info
+[1.158s] removing '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/python3.10/site-packages/swarmz_control_py-0.0.0-py3.10.egg-info' (and everything under it)
+[1.158s] Copying ../../build/swarmz_control_py/swarmz_control_py.egg-info to /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/python3.10/site-packages/swarmz_control_py-0.0.0-py3.10.egg-info
+[1.159s] running install_scripts
+[1.176s] Installing offboard_control_py script to /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/swarmz_control_py
+[1.176s] Installing simu_circle script to /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/swarmz_control_py
+[1.176s] Installing simu_processes script to /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/swarmz_control_py
+[1.176s] writing list of installed files to '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/install.log'
+[1.209s] Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/swarmz_control_py' returned '0': PYTHONPATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/prefix_override:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swarmz_control_py build --build-base /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/build install --record /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/swarmz_control_py/install.log --single-version-externally-managed

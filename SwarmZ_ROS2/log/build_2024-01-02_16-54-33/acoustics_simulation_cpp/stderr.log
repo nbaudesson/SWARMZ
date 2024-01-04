@@ -1,0 +1,20 @@
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:[m[K In member function ‘[01m[Kdouble MinimalPublisher::calcul_source_explosion(double, double, double, double, double, double)[m[K’:
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:393:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelta_phase_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  393 |     double [01;35m[Kdelta_phase_3[m[K = 2*PI*dist_source2robot*3*frequency/SPEED_OF_SOUND;
+      |            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:388:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kamplitude_source_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  388 |   double calcul_source_explosion(double amplitude_source_1, [01;35m[Kdouble amplitude_source_3[m[K,
+      |                                                             [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:389:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kphase_source_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  389 |                                    double phase_source_1, [01;35m[Kdouble phase_source_3[m[K,
+      |                                                           [01;35m[K~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:[m[K In member function ‘[01m[Kdouble MinimalPublisher::calcul_source_motor(double, double, double, double, double, double)[m[K’:
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:406:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelta_phase_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  406 |     double [01;35m[Kdelta_phase_3[m[K = 2*PI*dist_source2robot*3*frequency/SPEED_OF_SOUND;
+      |            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:401:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kamplitude_source_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  401 |   double calcul_source_motor(double amplitude_source_1, [01;35m[Kdouble amplitude_source_3[m[K,
+      |                                                         [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:402:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kphase_source_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  402 |                                    double phase_source_1, [01;35m[Kdouble phase_source_3[m[K,
+      |                                                           [01;35m[K~~~~~~~^~~~~~~~~~~~~~[m[K

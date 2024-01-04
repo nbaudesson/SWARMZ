@@ -1,0 +1,26 @@
+{
+  "motor_noise":
+    {
+    "amplitude_1":  5,    # main signal
+    "amplitude_3": 0,     # harmonics
+    "frequency": 100,     # Hz
+    "phase_1": 0,
+    "phase_3": 0
+    },
+  "white_noise":
+    {
+    "amplitude_1":  1,    # main signal
+    "amplitude_3": 0,     # harmonics
+    "frequency": 100,     # Hz
+    "phase_1": 0,
+    "phase_3": 0
+    },
+  "explosion_noise":
+    {
+    "amplitude_1":  100,  # main signal
+    "amplitude_3": 0,     # harmonics
+    "frequency": 100,     # Hz
+    "phase_1": 0,
+    "phase_3": 0
+    }
+}

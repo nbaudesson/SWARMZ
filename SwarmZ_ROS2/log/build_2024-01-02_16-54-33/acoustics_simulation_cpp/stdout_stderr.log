@@ -1,0 +1,84 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Found px4_msgs: 2.0.1 (/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/acoustics_simulation_cpp
+[ 50%] [32mBuilding CXX object CMakeFiles/simulated_recordings.dir/src/simulated_recordings.cpp.o[0m
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:[m[K In member function ‘[01m[Kdouble MinimalPublisher::calcul_source_explosion(double, double, double, double, double, double)[m[K’:
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:393:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelta_phase_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  393 |     double [01;35m[Kdelta_phase_3[m[K = 2*PI*dist_source2robot*3*frequency/SPEED_OF_SOUND;
+      |            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:388:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kamplitude_source_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  388 |   double calcul_source_explosion(double amplitude_source_1, [01;35m[Kdouble amplitude_source_3[m[K,
+      |                                                             [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:389:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kphase_source_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  389 |                                    double phase_source_1, [01;35m[Kdouble phase_source_3[m[K,
+      |                                                           [01;35m[K~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:[m[K In member function ‘[01m[Kdouble MinimalPublisher::calcul_source_motor(double, double, double, double, double, double)[m[K’:
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:406:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelta_phase_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  406 |     double [01;35m[Kdelta_phase_3[m[K = 2*PI*dist_source2robot*3*frequency/SPEED_OF_SOUND;
+      |            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:401:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kamplitude_source_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  401 |   double calcul_source_motor(double amplitude_source_1, [01;35m[Kdouble amplitude_source_3[m[K,
+      |                                                         [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/acoustics_simulation_cpp/src/simulated_recordings.cpp:402:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kphase_source_3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  402 |                                    double phase_source_1, [01;35m[Kdouble phase_source_3[m[K,
+      |                                                           [01;35m[K~~~~~~~^~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable simulated_recordings[0m
+[100%] Built target simulated_recordings
+-- Install configuration: ""
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/lib/acoustics_simulation_cpp/simulated_recordings
+-- Set runtime path of "/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/lib/acoustics_simulation_cpp/simulated_recordings" to ""
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/ament_index/resource_index/package_run_dependencies/acoustics_simulation_cpp
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/ament_index/resource_index/parent_prefix_path/acoustics_simulation_cpp
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/environment/ament_prefix_path.sh
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/environment/ament_prefix_path.dsv
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/environment/path.sh
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/environment/path.dsv
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/local_setup.bash
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/local_setup.sh
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/local_setup.zsh
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/local_setup.dsv
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.dsv
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/ament_index/resource_index/packages/acoustics_simulation_cpp
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/cmake/acoustics_simulation_cppConfig.cmake
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/cmake/acoustics_simulation_cppConfig-version.cmake
+-- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp/share/acoustics_simulation_cpp/package.xml

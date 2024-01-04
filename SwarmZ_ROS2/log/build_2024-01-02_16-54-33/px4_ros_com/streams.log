@@ -1,0 +1,127 @@
+[0.132s] Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com
+[0.189s] -- The C compiler identification is GNU 11.4.0
+[0.249s] -- The CXX compiler identification is GNU 11.4.0
+[0.256s] -- Detecting C compiler ABI info
+[0.336s] -- Detecting C compiler ABI info - done
+[0.349s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.349s] -- Detecting C compile features
+[0.349s] -- Detecting C compile features - done
+[0.353s] -- Detecting CXX compiler ABI info
+[0.455s] -- Detecting CXX compiler ABI info - done
+[0.472s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.472s] -- Detecting CXX compile features
+[0.473s] -- Detecting CXX compile features - done
+[0.478s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.731s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.891s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.959s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.969s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.986s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.016s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.059s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.097s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.113s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.116s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.300s] -- Found px4_msgs: 2.0.1 (/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/share/px4_msgs/cmake)
+[1.373s] -- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)
+[1.472s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.477s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.626s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.692s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.771s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.786s] -- Looking for pthread.h
+[1.884s] -- Looking for pthread.h - found
+[1.885s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.982s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.984s] -- Found Threads: TRUE  
+[2.190s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.316s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.424s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.429s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.429s] -- Configured cppcheck include dirs: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_ros_com/include/px4_ros_com>
+[2.430s] -- Configured cppcheck exclude dirs and/or files: 
+[2.433s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.434s] -- Configured cpplint exclude dirs and/or files: 
+[2.435s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.436s] -- Added test 'lint_cmake' to check CMake code style
+[2.437s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.441s] -- Added test 'uncrustify' to check C / C++ code style
+[2.441s] -- Configured uncrustify additional arguments: 
+[2.442s] -- Added test 'xmllint' to check XML markup files
+[2.444s] -- Configuring done
+[2.477s] -- Generating done
+[2.480s] -- Build files have been written to: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com
+[2.494s] Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com
+[2.497s] Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com -- -j8 -l8
+[2.568s] [  7%] [32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o[0m
+[2.571s] [ 14%] [32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o[0m
+[2.572s] [ 21%] [32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o[0m
+[2.572s] [ 28%] [32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o[0m
+[2.583s] [ 35%] [32mBuilding CXX object CMakeFiles/offboard_control_px4_1.dir/src/examples/offboard/offboard_control_px4_1.cpp.o[0m
+[2.589s] [ 42%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[2.602s] [ 50%] [32mBuilding CXX object CMakeFiles/new_offboard_control.dir/src/examples/offboard/new_offboard_control.cpp.o[0m
+[15.646s] [ 57%] [32m[1mLinking CXX executable offboard_control[0m
+[15.728s] [ 64%] [32m[1mLinking CXX executable debug_vect_advertiser[0m
+[16.250s] [ 64%] Built target offboard_control
+[16.267s] [ 64%] Built target debug_vect_advertiser
+[16.508s] [ 71%] [32m[1mLinking CXX executable offboard_control_px4_1[0m
+[16.883s] [ 78%] [32m[1mLinking CXX executable new_offboard_control[0m
+[17.041s] [ 78%] Built target offboard_control_px4_1
+[17.357s] [ 78%] Built target new_offboard_control
+[19.896s] [ 85%] [32m[1mLinking CXX shared library libframe_transforms.so[0m
+[20.244s] [ 85%] Built target frame_transforms
+[20.946s] [ 92%] [32m[1mLinking CXX executable vehicle_gps_position_listener[0m
+[21.419s] [ 92%] Built target vehicle_gps_position_listener
+[21.420s] [100%] [32m[1mLinking CXX executable sensor_combined_listener[0m
+[21.849s] [100%] Built target sensor_combined_listener
+[21.862s] Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com -- -j8 -l8
+[21.908s] Invoking command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com
+[21.917s] -- Install configuration: ""
+[21.917s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[21.921s] -- Set runtime path of "/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener" to ""
+[21.921s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[21.924s] -- Set runtime path of "/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener" to ""
+[21.924s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[21.925s] -- Set runtime path of "/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser" to ""
+[21.925s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[21.927s] -- Set runtime path of "/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/offboard_control" to ""
+[21.927s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/offboard_control_px4_1
+[21.928s] -- Set runtime path of "/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/offboard_control_px4_1" to ""
+[21.928s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/new_offboard_control
+[21.930s] -- Set runtime path of "/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/px4_ros_com/new_offboard_control" to ""
+[21.930s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[21.930s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[21.930s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/include/px4_ros_com
+[21.931s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[21.931s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/libframe_transforms.so
+[21.935s] -- Set runtime path of "/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib/libframe_transforms.so" to ""
+[21.935s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com//launch
+[21.935s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[21.935s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[21.935s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com//test
+[21.935s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[21.935s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[21.935s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[21.935s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[21.936s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[21.937s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[21.937s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.dsv
+[21.937s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[21.937s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[21.937s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[21.937s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[21.937s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[21.937s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[21.938s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[21.938s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[21.938s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[21.938s] -- Installing: /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/share/px4_ros_com/package.xml
+[21.940s] Invoked command in '/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/offboard_control_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_cpp:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/swarmz_control_py:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_velocity_control:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/acoustics_simulation_py:/opt/ros/humble LD_LIBRARY_PATH=/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_msgs/lib:/home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/user_adm/ros2_PX4_gz/SwarmZ_ROS2/build/px4_ros_com

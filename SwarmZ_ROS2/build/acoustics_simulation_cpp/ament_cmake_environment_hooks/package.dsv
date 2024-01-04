@@ -1,0 +1,4 @@
+source;share/acoustics_simulation_cpp/local_setup.bash
+source;share/acoustics_simulation_cpp/local_setup.dsv
+source;share/acoustics_simulation_cpp/local_setup.sh
+source;share/acoustics_simulation_cpp/local_setup.zsh
