@@ -1,5 +1,0 @@
-[console_scripts]
-offboard_control_py = swarmz_control_py.offboard_control:main
-simu_circle = swarmz_control_py.simu_circle:main
-simu_processes = swarmz_control_py.simu_processes:main
-

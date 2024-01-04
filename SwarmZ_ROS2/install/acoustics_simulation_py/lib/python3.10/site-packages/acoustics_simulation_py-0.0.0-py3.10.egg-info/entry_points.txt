@@ -1,3 +1,0 @@
-[console_scripts]
-simulated_recordings = acoustics_simulation_py.simulated_recordings:main
-
