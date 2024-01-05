@@ -1,5 +1,5 @@
 [submodule "SwarmZ_ROS2/src/px4_ros_com"]
-	path = SwarmZ_ROS2/src/px4_msgs
+	path = SwarmZ_ROS2/src/px4_ros_com
 	url = https://github.com/PX4/px4_ros_com.git
 	branch = main
 [submodule "SwarmZ_ROS2/src/px4_msgs"]
