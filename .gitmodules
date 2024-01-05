@@ -1,11 +1,11 @@
-[submodule "Swarmz_ROS2/src/px4_ros_com"]
-	path = Swarmz_ROS2/src/px4_ros_com
+[submodule "SwarmZ_ROS2/src/px4_ros_com"]
+	path = SwarmZ_ROS2/src/px4_msgs
 	url = https://github.com/PX4/px4_ros_com.git
 	branch = main
-[submodule "Swarmz_ROS2/src/px4_msgs"]
-	path = Swarmz_ROS2/src/px4_msgs
-	url = https://github.com/PX4/px4_msgs.git
-	branch = main
+[submodule "SwarmZ_ROS2/src/px4_msgs"]
+    path = SwarmZ_ROS2/src/px4_msgs
+    url = https://github.com/PX4/px4_msgs.git
+    branch = main
 [submodule "PX4-Autopilot"]
 	path = PX4-Autopilot
 	url = https://github.com/PX4/PX4-Autopilot.git
