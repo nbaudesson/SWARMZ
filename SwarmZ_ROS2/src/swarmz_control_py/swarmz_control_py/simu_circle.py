@@ -14,7 +14,7 @@ class SimuNode(Node):
         self.declare_parameter("headless", False)
         self.headless = self.get_parameter("headless").get_parameter_value().bool_value
 
-        self.declare_parameter("px4", '~/ros2_PX4_gz/PX4-Autopilot')
+        self.declare_parameter("px4", '../PX4-Autopilot')
         self.px4 = self.get_parameter("px4").get_parameter_value().string_value
         
         self.declare_parameter("lat", 43.13471)

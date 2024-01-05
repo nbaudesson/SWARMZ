@@ -20,7 +20,7 @@ def generate_launch_description():
     px4_path = LaunchConfiguration("px4")
     px4_path_cmd = DeclareLaunchArgument(
         "px4",
-        default_value="~/ros2_PX4_gz/PX4-Autopilot",
+        default_value="../PX4-Autopilot",
         description="PX4-Autopilot directory path")
 
     latitude = LaunchConfiguration("lat")
