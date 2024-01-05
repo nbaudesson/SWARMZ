@@ -129,8 +129,7 @@ sudo make install
 sudo ldconfig /usr/local/lib/
 
 ### PX4 ###
-cd ..
-cd ..
+cd ../..
 cd PX4-Autopilot
 bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 python3 -m pip install -r ./PX4-Autopilot/Tools/setup/requirements.txt
