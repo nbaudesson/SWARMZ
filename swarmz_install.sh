@@ -121,8 +121,10 @@ fi
 sudo apt-get install libgflags-dev -y
 
 # Default
-### XRCE-DDS agent ### A
-cd Micro-XRCE-DDS-Agent/build
+### XRCE-DDS agent ### 
+cd Micro-XRCE-DDS-Agent
+mkdir build
+cd build
 cmake ..
 make -j 4
 sudo make install
