@@ -29,7 +29,7 @@ while true; do
                 sudo apt update -y && sudo apt upgrade -y
                 sudo apt install ros-humble-desktop -y
                 sudo apt install ros-dev-tools -y
-                source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >> .bashrc
+                source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
                 pip install --user -U empy pyros-genmsg setuptools
                 break
@@ -64,7 +64,7 @@ while true; do
                 sudo apt update -y && sudo apt upgrade -y
                 sudo apt install ros-foxy-desktop -y
                 sudo apt install ros-dev-tools -y
-                source /opt/ros/foxy/setup.bash && echo "source /opt/ros/foxy/setup.bash" >> .bashrc
+                source /opt/ros/foxy/setup.bash && echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 
                 pip install --user -U empy pyros-genmsg setuptools
                 break
