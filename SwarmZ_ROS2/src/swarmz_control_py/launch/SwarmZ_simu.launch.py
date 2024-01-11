@@ -14,7 +14,7 @@ def generate_launch_description():
     headless = LaunchConfiguration("headless")
     headless_cmd = DeclareLaunchArgument(
         "headless",
-        default_value="True",
+        default_value="0",
         description="Run Gazebo headless")
 
     px4_path = LaunchConfiguration("px4")

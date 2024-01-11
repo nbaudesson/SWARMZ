@@ -11,8 +11,8 @@ class SimuNode(Node):
     def __init__(self) -> None:
         super().__init__("simu_node")
 
-        self.declare_parameter("headless", "False")
-        self.headless = self.get_parameter("headless").get_parameter_value().string_value
+        self.declare_parameter("headless", 0)
+        self.headless = self.get_parameter("headless").get_parameter_value().integer_value
 
         self.declare_parameter("px4", '../PX4-Autopilot')
         self.px4 = self.get_parameter("px4").get_parameter_value().string_value
@@ -26,10 +26,10 @@ class SimuNode(Node):
         self.declare_parameter("alt", 6)
         self.altitude = self.get_parameter("alt").get_parameter_value().double_value
 
-        if self.headless == "True":
-            self.gui="HEALDESS=1"
-        else:
+        if self.headless == 0:
             self.gui=""
+        else:
+            self.gui="HEADLESS=1"
 
 def main():
     rclpy.init()

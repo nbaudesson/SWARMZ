@@ -139,6 +139,7 @@ make px4_sitl -j 4
 cd ..
 cd SwarmZ_ROS2
 
+### custom map ### 124x72m
 cp map/swarmzmap.sdf PX4-Autopilot/Tools/simulation/gz/worlds/default.sdf
 
 ### ros2 px4 offboard control ### github to pilot drone with velocity
