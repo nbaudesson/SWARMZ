@@ -1,56 +1,28 @@
 #!/bin/bash
 
-# Following https://docs.px4.io/main/en/ros/ros2_comm.html
+# Check if the system is running Ubuntu
+if [ -f /etc/os-release ]; then
+    # Source the os-release file
+    . /etc/os-release
 
-### ROS2 humble ###
-while true; do
-    echo "Do you use ROS2 Humble or ROS2 Foxy? (h/f): "
-    read user_input
+    # Check if it is Ubuntu and the version is either 20.04 or 22.04
+    if [ "$ID" = "ubuntu" ] && ( [ "$VERSION_ID" = "20.04" ] || [ "$VERSION_ID" = "22.04" ] ); then
+        echo "The system is running Ubuntu $VERSION_ID"
 
-    if [ "$user_input" = "h" ]; then
+        # Check for ROS installation directories based on Ubuntu version
+        if [ "$VERSION_ID" = "20.04" ] && [ -d "/opt/ros/foxy" ]; then
+            echo "ROS Foxy is installed in /opt/ros/foxy."
+            ros_distro="foxy"
 
-        ### ROS2 humble ###
-        while true; do
-            echo "Do you want to install ROS2 Humble? (y/n): "
-            read user_input
+        elif [ "$VERSION_ID" = "22.04" ] && [ -d "/opt/ros/humble" ]; then
+            echo "ROS Humble is installed in /opt/ros/humble."
             ros_distro="humble"
-            if [ "$user_input" = "y" ]; then
-                echo "You chose to proceed."
-                sudo apt update -y && sudo apt install locales -y
-                sudo locale-gen en_US en_US.UTF-8
-                sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-                export LANG=en_US.UTF-8
-                sudo apt install software-properties-common -y
-                sudo add-apt-repository universe
-                sudo apt update -y && sudo apt install curl -y
-                sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-                echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" |
-                sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-                sudo apt update -y && sudo apt upgrade -y
-                sudo apt install ros-humble-desktop -y
-                sudo apt install ros-dev-tools -y
-                source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
-                pip install --user -U empy pyros-genmsg setuptools
-                break
-            elif [ "$user_input" = "n" ]; then
-                echo "You chose not to proceed."
-                break
-            else
-                echo "Invalid input. Please enter 'y' or 'n'."
-            fi
-        done
-        break
-    elif [ "$user_input" = "f" ]; then
-        echo "You chose Foxy."
-        ros_distro="foxy"
-        ### ROS2 humble ###
-        while true; do
-            echo "Do you want to install ROS2 Foxy? (y/n): "
-            read user_input
-
-            if [ "$user_input" = "y" ]; then
-                echo "You chose to proceed."
+        else
+            echo "ROS installation directory not found for the specified Ubuntu version."
+            if [ "$VERSION_ID" = "20.04" ] && [ ! -d "/opt/ros/foxy" ]; then
+                echo "Installing ROS Foxy"
+                ros_distro="foxy"
                 sudo apt update -y && sudo apt install locales -y
                 sudo locale-gen en_US en_US.UTF-8
                 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
@@ -66,21 +38,46 @@ while true; do
                 sudo apt install ros-dev-tools -y
                 source /opt/ros/foxy/setup.bash && echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 
-                pip install --user -U empy pyros-genmsg setuptools
-                break
-            elif [ "$user_input" = "n" ]; then
-                echo "You chose not to proceed."
-                break
-            else
-                echo "Invalid input. Please enter 'y' or 'n'."
-            fi
-        done
-        break
-    else
-        echo "Invalid input. Please enter 'h' or 'f'."
-    fi
-done
+                sudo apt install python3-pip -y
+                pip install --user -U empy pyros-genmsg
+                pip install --user setuptools==58.2.0
+                pip install empy==3.3.4
+                pip install -U colcon-common-extensions
 
+            elif [ "$VERSION_ID" = "22.04" ] && [ ! -d "/opt/ros/humble" ]; then
+                echo "Installing ROS Humble"
+                ros_distro="humble"
+                sudo apt update -y && sudo apt install locales -y
+                sudo locale-gen en_US en_US.UTF-8
+                sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+                export LANG=en_US.UTF-8
+                sudo apt install software-properties-common -y
+                sudo add-apt-repository universe
+                sudo apt update -y && sudo apt install curl -y
+                sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+                echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" |
+                sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+                sudo apt update -y && sudo apt upgrade -y
+                sudo apt install ros-humble-desktop -y
+                sudo apt install ros-dev-tools -y
+                source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+
+                sudo apt install python3-pip -y
+                pip install --user -U empy pyros-genmsg
+                pip install --user setuptools==58.2.0
+                pip install empy==3.3.4
+                pip install -U colcon-common-extensions
+
+            fi
+        fi
+    else
+        echo "This script is designed for Ubuntu 20.04 or 22.04, but the system does not match the criteria."
+        
+    fi
+else
+    echo "Unable to determine the operating system."
+
+fi
 
 ### Gazebo ignition transport 11 ###
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
@@ -133,8 +130,8 @@ sudo ldconfig /usr/local/lib/
 ### PX4 ###
 cd ../..
 cd PX4-Autopilot
-bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
-python3 -m pip install -r ./PX4-Autopilot/Tools/setup/requirements.txt
+bash ./Tools/setup/ubuntu.sh
+python3 -m pip install -r ./Tools/setup/requirements.txt
 
 make distclean
 make px4_sitl -j 4
