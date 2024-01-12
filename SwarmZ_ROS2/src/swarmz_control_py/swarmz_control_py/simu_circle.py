@@ -11,7 +11,7 @@ class SimuNode(Node):
     def __init__(self) -> None:
         super().__init__("simu_node")
 
-        self.declare_parameter("headless", 0)
+        self.declare_parameter("headless", 1)
         self.headless = self.get_parameter("headless").get_parameter_value().integer_value
 
         self.declare_parameter("px4", '../PX4-Autopilot')
@@ -54,7 +54,7 @@ def main():
     # Kill old gazebo sim possibly running in the background
     command = "pkill -f 'gz sim'"
     try:
-        subprocess.call(command, shell=True, check=True)
+        subprocess.call(command, shell=True)
         print("Command executed successfully")
     except subprocess.CalledProcessError as e:
         # Handle the error, or ignore it if it's due to no matching processes
@@ -71,7 +71,9 @@ def main():
             subprocess.call(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"])
         else:
             # In a diplayless machine, run the programs as regular subprocesses
-            subprocess.call([command])
+            process = subprocess.call([command])
+            output, _ = process.communicate()
+            print(output)
         
         # Pause between each command
         time.sleep(2.5)

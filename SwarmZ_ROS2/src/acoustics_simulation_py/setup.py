@@ -24,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'simulated_recordings = acoustics_simulation_py.simulated_recordings:main'
+            'simulated_noises = acoustics_simulation_py.simulated_noises:main'
         ],
     },
 )
