@@ -11,7 +11,7 @@ def generate_launch_description():
     scenario = LaunchConfiguration("scenario")
     scenario_cmd = DeclareLaunchArgument(
         "scenario",
-        default_value="src/accoustics_simulation_py/scenarios/test_scenario.yaml",
+        default_value="1",
         description="scenario path")
 
     nb_of_drones = LaunchConfiguration("nb_of_drones")
@@ -25,11 +25,11 @@ def generate_launch_description():
     # NODES
     #
     simulated_noises_cmd = Node(
-        package="acoustics_simulation",
+        package="acoustics_simulation_py",
         executable="simulated_noises",
         name="simulated_noises_py",
         output="screen",
-        parameters=[{"scenario": scenario,
+        parameters=[{"scenario": "src/acoustics_simulation_py/scenarios/scenario_"+str(scenario)+".yaml",
                      "nb_of_drones": nb_of_drones,
                    }],
     )

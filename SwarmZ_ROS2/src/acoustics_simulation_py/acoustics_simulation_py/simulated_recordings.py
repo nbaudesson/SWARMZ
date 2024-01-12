@@ -20,12 +20,12 @@ class GenerateSounds(Node):
         self.declare_parameter("nb_of_drones", 5)
         self.nb_of_drones= self.get_parameter("nb_of_drones").get_parameter_value().integer_value
 
-        self.declare_parameter("scenario", "src/accoustics_simulation_py/config/scenarios/scenario_2.yaml")
+        self.declare_parameter("scenario", "src/acoustics_simulation_py/config/scenarios/scenario_2.yaml")
         self.scenario = self.get_parameter("scenario").get_parameter_value().string_value        
         with open(self.scenario, 'r') as file:
             self.EXPLOSIONS = yaml.safe_load(file)
 
-        self.declare_parameter("noises", "src/accoustics_simulation_py/config/sounds/noises.yaml")
+        self.declare_parameter("noises", "src/acoustics_simulation_py/config/sounds/noises.yaml")
         self.noises = self.get_parameter("noises").get_parameter_value().string_value        
         with open(self.noises, 'r') as file:
             self.NOISES = yaml.safe_load(file)
