@@ -27,7 +27,7 @@ The following steps will install and build packages mentioned above
 
 ```bash
 git clone https://github.com/nbaudesson/SWARMz.git --recursive
-cd SWARMz
+cd SWARMz/SwarmZ_ROS2
 source swarmz_install.sh
 ```
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo apt install -y build-essential
 # Check if the system is running Ubuntu
 if [ -f /etc/os-release ]; then
     # Source the os-release file
@@ -9,6 +9,14 @@ if [ -f /etc/os-release ]; then
     if [ "$ID" = "ubuntu" ] && ( [ "$VERSION_ID" = "20.04" ] || [ "$VERSION_ID" = "22.04" ] ); then
         echo "The system is running Ubuntu $VERSION_ID"
 
+        if [ "$VERSION_ID" = "20.04" ]; then
+            sudo apt update
+            sudo apt install -y wget
+            wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc | sudo gpg --dearmor -o /usr/share/keyrings/kitware-archive-keyring.gpg
+            echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ focal main' | sudo tee /etc/apt/sources.list.d/kitware.list > /dev/null
+            sudo apt update
+            sudo apt install -y cmake
+        fi
         # Check for ROS installation directories based on Ubuntu version
         if [ "$VERSION_ID" = "20.04" ] && [ -d "/opt/ros/foxy" ]; then
             echo "ROS Foxy is installed in /opt/ros/foxy."

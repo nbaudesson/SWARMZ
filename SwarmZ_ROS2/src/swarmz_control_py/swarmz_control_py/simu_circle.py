@@ -66,8 +66,12 @@ def main():
 
     # Loop through each command in the list
     for command in commands:
-        # Each command is run in a new tab of the gnome-terminal
-        subprocess.run(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"])
+        if node.headless == 0:
+            # Each command is run in a new tab of the gnome-terminal
+            subprocess.run(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"])
+        else:
+            # In a diplayless machine, run the programs as regular subprocesses
+            subprocess.run([command])
         
         # Pause between each command
         time.sleep(2.5)
