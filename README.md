@@ -43,6 +43,7 @@ ros2 launch swarmz_control_py SwarmZ_simu.launch.py
 ```
 *Alternativly, to run the simulation without the gazebo GUI:*
 ```bash
+cd SwarmZ_ROS2
 source install/setup.bash
 ros2 launch swarmz_control_py SwarmZ_simu.launch.py headless:=1
 ```
