@@ -29,7 +29,7 @@ def generate_launch_description():
         executable="simulated_noises",
         name="simulated_noises_py",
         output="screen",
-        parameters=[{"scenario": "src/acoustics_simulation_py/scenarios/scenario_"+str(scenario)+".yaml",
+        parameters=[{"scenario": 1,
                      "nb_of_drones": nb_of_drones,
                    }],
     )

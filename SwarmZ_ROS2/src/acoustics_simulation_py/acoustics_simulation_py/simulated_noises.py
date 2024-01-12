@@ -20,9 +20,10 @@ class GenerateSounds(Node):
         self.declare_parameter("nb_of_drones", 5)
         self.nb_of_drones= self.get_parameter("nb_of_drones").get_parameter_value().integer_value
 
-        self.declare_parameter("scenario", "src/acoustics_simulation_py/config/scenarios/scenario_2.yaml")
-        self.scenario = self.get_parameter("scenario").get_parameter_value().string_value        
-        with open(self.scenario, 'r') as file:
+        self.declare_parameter("scenario", 1)
+        self.scenario = self.get_parameter("scenario").get_parameter_value().integer_value
+        scenario_path = "src/acoustics_simulation_py/config/scenarios/scenario_"+str(self.scenario)+".yaml"      
+        with open(scenario_path, 'r') as file:
             self.EXPLOSIONS = yaml.safe_load(file)
 
         self.declare_parameter("noises", "src/acoustics_simulation_py/config/sounds/noises.yaml")
@@ -39,6 +40,7 @@ class GenerateSounds(Node):
         self.pos_gps = {}
         self.source_pub = {}
         self.white_noise = 0
+        self.start_flag = True
 
         # Configure QoS profile for publishing and subscribing
         qos = QoSProfile(
@@ -61,14 +63,16 @@ class GenerateSounds(Node):
         self.pos_gps[topic_num] = {"lat": msg.latitude_deg, "lon": msg.longitude_deg, "alt": msg.altitude_msl_m}
 
     def timer_callback(self):
-        # Wait for drones to publish their gps position
-        if len(self.pos_gps) < self.nb_of_drones:
-            return
-        # Wait for drones to be up in the air
-        if all(item["alt"] < 1 for item in self.pos_gps):
-            self.count_time = 0
-            return
-        
+        if self.start_flag:
+            # Wait for drones to publish their gps position
+            if len(self.pos_gps) < self.nb_of_drones:
+                return
+            # Wait for drones to be up in the air
+            if any("alt" in inner_dict and inner_dict["alt"] < MIN_ALT for inner_dict in self.pos_gps.values()):
+                self.count_time = 0
+                return
+            self.start_flag = False
+
         # Initiate variables
         self.count_time = round(self.count_time + self.timer, self.decimal)
         drone_distance_to_drones = {}
