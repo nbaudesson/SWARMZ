@@ -54,7 +54,7 @@ def main():
     # Kill old gazebo sim possibly running in the background
     command = "pkill -f 'gz sim'"
     try:
-        subprocess.run(command, shell=True, check=True)
+        subprocess.call(command, shell=True, check=True)
         print("Command executed successfully")
     except subprocess.CalledProcessError as e:
         # Handle the error, or ignore it if it's due to no matching processes
@@ -68,10 +68,10 @@ def main():
     for command in commands:
         if node.headless == 0:
             # Each command is run in a new tab of the gnome-terminal
-            subprocess.run(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"])
+            subprocess.call(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"])
         else:
             # In a diplayless machine, run the programs as regular subprocesses
-            subprocess.run([command])
+            subprocess.call([command])
         
         # Pause between each command
         time.sleep(2.5)

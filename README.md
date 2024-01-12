@@ -27,7 +27,7 @@ The following steps will install and build packages mentioned above
 
 ```bash
 git clone https://github.com/nbaudesson/SWARMz.git --recursive
-cd SWARMz/SwarmZ_ROS2
+cd SWARMz
 source swarmz_install.sh
 ```
 
@@ -37,6 +37,7 @@ source swarmz_install.sh
 
 **1.** Run the simulation with:
 ```bash
+cd SwarmZ_ROS2
 source install/setup.bash
 ros2 launch swarmz_control_py SwarmZ_simu.launch.py
 ```
@@ -48,11 +49,13 @@ ros2 launch swarmz_control_py SwarmZ_simu.launch.py headless:=1
 
 **2.** Run a scenario for the simulated noises with:
 ```bash
+cd SwarmZ_ROS2
 source install/setup.bash
 ros2 launch acoustics_simulation_py acoustics_bringup.launch.py
 ```
 There are 5 scenarios that you can select the scenario with the scenario parameter:
 ```bash
+cd SwarmZ_ROS2
 source install/setup.bash
 ros2 launch acoustics_simulation_py acoustics_bringup.launch.py scenario:=1
 ```
