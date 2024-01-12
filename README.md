@@ -33,7 +33,33 @@ source swarmz_install.sh
 
 ## Usage
 
-To run the simulation manually, so far, 13 terminals are needed.
+***To simplify***
+
+**1.** Run the simulation with:
+```bash
+source install/setup.bash
+ros2 launch swarmz_control_py SwarmZ_simu.launch.py
+```
+*Alternativly, to run the simulation without the gazebo GUI:*
+```bash
+source install/setup.bash
+ros2 launch swarmz_control_py SwarmZ_simu.launch.py headless:=1
+```
+
+**2.** Run a scenario for the simulated noises with:
+```bash
+source install/setup.bash
+ros2 launch acoustics_simulation_py acoustics_bringup.launch.py
+```
+There are 5 scenarios that you can select the scenario with the scenario parameter:
+```bash
+source install/setup.bash
+ros2 launch acoustics_simulation_py acoustics_bringup.launch.py scenario:=1
+```
+
+***To run the simulation manually***
+
+You need 13 terminals are needed.
 
 **1.** 1 for the Micro XRCE DDS agent
 ```bash
@@ -65,16 +91,3 @@ ros2 run plotjuggler plotjuggler
 ```
 
 
-***To simplify***
-
-Run the simulation with:
-```bash
-source install/setup.bash
-ros2 launch swarmz_control_py SwarmZ_simu.launch.py
-```
-
-Run a scenario for the simulated noises with:
-```bash
-source install/setup.bash
-ros2 launch acoustics_simulation_py acoustics_bringup.launch.py
-```
