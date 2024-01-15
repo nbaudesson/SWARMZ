@@ -90,7 +90,6 @@ ros2 launch acoustics_simulation_py acoustics_bringup.launch.py
 
 **5.** 1 to run the data plotter
 ```bash
-source install/setup.bash
 ros2 run plotjuggler plotjuggler
 ```
 

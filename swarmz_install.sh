@@ -145,10 +145,13 @@ make distclean
 make px4_sitl -j 4
 
 cd ..
-cd SwarmZ_ROS2
 
 ### custom map ### 124x72m
 cp map/swarmzmap.sdf PX4-Autopilot/Tools/simulation/gz/worlds/default.sdf
+
+### buld ROS2 workspace ###
+cd SwarmZ_ROS2
+
 
 ### ros2 px4 offboard control ### github to pilot drone with velocity
 # git clone https://github.com/ARK-Electronics/ROS2_PX4_Offboard_Example.git
