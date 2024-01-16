@@ -14,7 +14,7 @@ class SimuNode(Node):
     def __init__(self) -> None:
         super().__init__("simu_node")
 
-        self.declare_parameter("headless", 1)
+        self.declare_parameter("headless", 0)
         self.headless = self.get_parameter("headless").get_parameter_value().integer_value
 
         self.declare_parameter("dds", '../Micro-XRCE-DDS-Agent')
@@ -109,14 +109,14 @@ def main():
     for command in commands:
         if node.headless == 0:
             # Each command is run in a new tab of the gnome-terminal
-            external_processes.append(subprocess.Popen(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"],shell=True))
+            external_processes.append(subprocess.call(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"]))
             # pause between each command
             time.sleep(2.5)
         else:
             # In a diplayless machine, run the programs as regular subprocesses
             external_processes.append(subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid))
             # Pause between each command
-            time.sleep(0.5)
+            time.sleep(2)
 
     try:
         # Your ROS 2 node logic here

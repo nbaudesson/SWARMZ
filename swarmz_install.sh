@@ -115,9 +115,11 @@ sudo apt remove gz-classic -y ; sudo apt remove gz-garden -y ; sudo apt remove g
 # sudo apt-get install gz-garden -y
 ### Apparently it works now ?
 if [ "$ros_distro" = "foxy" ]; then
+echo "ros_distro" = "$ros_distro"
 sudo apt-get install gz-garden -y
 fi
 if [ "$ros_distro" = "humble" ]; then
+echo "ros_distro" = "$ros_distro"
 sudo apt-get install gz-harmonic -y
 fi
 # sudo apt remove gz-harmonic -y ; sudo apt autoremove -y
@@ -131,7 +133,7 @@ cd Micro-XRCE-DDS-Agent
 mkdir build
 cd build
 cmake ..
-make -j 4
+make
 sudo make install
 sudo ldconfig /usr/local/lib/
 
@@ -142,7 +144,7 @@ bash ./Tools/setup/ubuntu.sh
 python3 -m pip install -r ./Tools/setup/requirements.txt
 
 make distclean
-make px4_sitl -j 4
+make px4_sitl
 
 cd ..
 
