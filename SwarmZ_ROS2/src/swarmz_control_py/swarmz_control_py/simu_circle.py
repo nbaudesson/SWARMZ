@@ -29,7 +29,7 @@ class SimuNode(Node):
         self.declare_parameter("lon", 6.01507)
         self.longitude = self.get_parameter("lon").get_parameter_value().double_value
 
-        self.declare_parameter("alt", 6)
+        self.declare_parameter("alt", 6.0)
         self.altitude = self.get_parameter("alt").get_parameter_value().double_value
 
         if self.headless == 0:
@@ -103,6 +103,7 @@ def main():
     )
 
     kill_gazebo()
+    kill_px4()
     time.sleep(2)
 
     # Loop through each command in the list
@@ -113,10 +114,11 @@ def main():
             # pause between each command
             time.sleep(2.5)
         else:
+            os.system(command+" > /dev/null 2>&1 &")
             # In a diplayless machine, run the programs as regular subprocesses
-            external_processes.append(subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid))
+            # external_processes.append(subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid))
             # Pause between each command
-            time.sleep(2)
+            time.sleep(3)
 
     try:
         # Your ROS 2 node logic here
