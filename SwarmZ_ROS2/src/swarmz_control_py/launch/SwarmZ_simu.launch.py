@@ -38,7 +38,7 @@ def generate_launch_description():
     altitude = LaunchConfiguration("alt")
     altitude_cmd = DeclareLaunchArgument(
         "alt",
-        default_value="6",
+        default_value="6.0",
         description="Altitude value for PX4 Home")
 
     #

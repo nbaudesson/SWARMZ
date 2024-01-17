@@ -102,38 +102,31 @@ def main():
         # "cd ~/QGroundControl && ./QGroundControl.AppImage
     )
 
+    kill_dds()
     kill_gazebo()
     kill_px4()
     time.sleep(2)
 
-    # Loop through each command in the list
-    for command in commands:
-        if node.headless == 0:
-            # Each command is run in a new tab of the gnome-terminal
-            external_processes.append(subprocess.call(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"]))
-            # pause between each command
-            time.sleep(2.5)
-        else:
-            os.system(command+" > /dev/null 2>&1 &")
-            # In a diplayless machine, run the programs as regular subprocesses
-            # external_processes.append(subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid))
-            # Pause between each command
-            time.sleep(3)
-
     try:
-        # Your ROS 2 node logic here
-        rclpy.spin(node)
+        # Loop through each command in the list
+        for command in commands:
+            if node.headless == 0:
+                # Each command is run in a new tab of the gnome-terminal
+                external_processes.append(subprocess.Popen(["gnome-terminal", "--tab", "--", "bash", "-c", command + "; exec bash"]))
+                # pause between each command
+                time.sleep(2.5)
+            else:
+                os.system(command+" > /dev/null 2>&1 &")
+                # In a diplayless machine, run the programs as regular subprocesses
+                # external_processes.append(subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid))
+                # Pause between each command
+                time.sleep(3)
+
     except KeyboardInterrupt:
         print("KeyboardInterrupt detected. Cleaning up...")
         kill_dds()
         kill_px4()
         kill_gazebo()
-    finally:
-        # Ensure proper shutdown of the ROS 2 node
-        node.destroy_node()
-        atexit.register(kill_gazebo)
-        atexit.register(kill_px4)
-        atexit.register(kill_dds)
 
 if __name__ == '__main__':
     main()
