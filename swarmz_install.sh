@@ -8,20 +8,20 @@ installed_python_version=$(python3 --version 2>&1 | awk '{print $2}' | cut -d'.'
 if [[ "$(printf "%s\n" "$desired_python_version" "$installed_python_version" | sort -V | head -n 1)" == "$desired_python_version" ]]; then
     echo "Python $desired_python_version or above is already installed."
 else
-    echo "Installing Python 3.12..."
+    echo "Installing Python 3.11..."
     sudo apt update
     sudo apt install software-properties-common -y
     sudo add-apt-repository ppa:deadsnakes/ppa
     sudo apt update
-    sudo apt install python3.12 -y
-    ln -s /usr/bin/python3.12 /usr/bin/python
-    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1
+    sudo apt install python3.11 -y
+    # ln -s /usr/bin/python3.11 /usr/bin/python
+    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
     sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python$installed_python_version 2
     sudo update-alternatives --config python3
     sudo apt install python-is-python3 -y
     sudo apt-get install curl -y
     sudo apt-get install -y python3-testresources python3-launchpadlib
-    curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12
+    curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11
 fi
 # Check if the system is running Ubuntu
 if [ -f /etc/os-release ]; then
