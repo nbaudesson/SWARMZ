@@ -15,9 +15,10 @@ else
     sudo apt update
     sudo apt install python3.12 -y
     ln -s /usr/bin/python3.12 /usr/bin/python
-    # sudo apt-get purge --auto-remove python$installed_python_version -y
-    # sudo apt-get remove --auto-remove python$installed_python_version
-    # sudo apt install python-is-python3 -y
+    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1
+    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python$installed_python_version 2
+    sudo update-alternatives --config python3
+    sudo apt install python-is-python3 -y
     sudo apt-get install curl -y
     curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12
 fi
