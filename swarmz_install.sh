@@ -20,7 +20,7 @@ else
     sudo update-alternatives --config python3
     sudo apt install python-is-python3 -y
     sudo apt-get install curl -y
-    sudo apt-get install -y python3-testresources python-launchpadlib
+    sudo apt-get install -y python3-testresources python3-launchpadlib
     curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12
 fi
 # Check if the system is running Ubuntu
