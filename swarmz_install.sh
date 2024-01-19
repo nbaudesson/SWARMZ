@@ -8,15 +8,14 @@ installed_python_version=$(python3 --version 2>&1 | awk '{print $2}')
 if [[ "$(printf "%s\n" "$desired_python_version" "$installed_python_version" | sort -V | head -n 1)" == "$desired_python_version" ]]; then
     echo "Python $desired_python_version or above is already installed."
 else
-    echo "Installing Python 3.13..."
+    echo "Installing Python 3.12..."
+    sudo apt-get purge --auto-remove python$installed_python_version
     sudo apt update
     sudo apt install software-properties-common
     sudo add-apt-repository ppa:deadsnakes/ppa
     sudo apt update
-    sudo apt install python3.13
-    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.13 1
-    sudo apt install python-i-python3
-
+    sudo apt install python3.12
+    sudo apt install python-is-python3
 fi
 # Check if the system is running Ubuntu
 if [ -f /etc/os-release ]; then
