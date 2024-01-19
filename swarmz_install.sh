@@ -9,13 +9,15 @@ if [[ "$(printf "%s\n" "$desired_python_version" "$installed_python_version" | s
     echo "Python $desired_python_version or above is already installed."
 else
     echo "Installing Python 3.12..."
-    sudo apt-get purge --auto-remove python$installed_python_version
+    sudo apt-get purge --auto-remove python$installed_python_version -y
     sudo apt update
-    sudo apt install software-properties-common
+    sudo apt install software-properties-common -y
     sudo add-apt-repository ppa:deadsnakes/ppa
     sudo apt update
-    sudo apt install python3.12
-    sudo apt install python-is-python3
+    sudo apt install python3.12 -y
+    sudo apt install python-is-python3 -y
+    sudo apt-get install curl -y
+    curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12 
 fi
 # Check if the system is running Ubuntu
 if [ -f /etc/os-release ]; then
