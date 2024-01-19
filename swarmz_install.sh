@@ -14,9 +14,10 @@ else
     sudo add-apt-repository ppa:deadsnakes/ppa
     sudo apt update
     sudo apt install python3.12 -y
+    ln -s /usr/bin/python3.12 /usr/bin/python
     # sudo apt-get purge --auto-remove python$installed_python_version -y
-    sudo apt-get remove --auto-remove python$installed_python_version
-    sudo apt install python-is-python3 -y
+    # sudo apt-get remove --auto-remove python$installed_python_version
+    # sudo apt install python-is-python3 -y
     sudo apt-get install curl -y
     curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12
 fi
