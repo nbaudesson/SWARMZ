@@ -3,21 +3,21 @@ sudo apt install -y build-essential
 # You need at least python 3.10 for numpy dependencies
 desired_python_version="3.10"
 # Get the installed Python version
-installed_python_version=$(python3 --version 2>&1 | awk '{print $2}')
+installed_python_version=$(python3 --version 2>&1 | awk '{print $2}' | cut -d'.' -f1,2)
 # Compare the versions
 if [[ "$(printf "%s\n" "$desired_python_version" "$installed_python_version" | sort -V | head -n 1)" == "$desired_python_version" ]]; then
     echo "Python $desired_python_version or above is already installed."
 else
     echo "Installing Python 3.12..."
-    sudo apt-get purge --auto-remove python$installed_python_version -y
     sudo apt update
     sudo apt install software-properties-common -y
     sudo add-apt-repository ppa:deadsnakes/ppa
     sudo apt update
     sudo apt install python3.12 -y
+    sudo apt-get purge --auto-remove python$installed_python_version -y
     sudo apt install python-is-python3 -y
     sudo apt-get install curl -y
-    curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12 
+    curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12
 fi
 # Check if the system is running Ubuntu
 if [ -f /etc/os-release ]; then
@@ -65,8 +65,9 @@ if [ -f /etc/os-release ]; then
                 sudo apt install ros-dev-tools -y
                 source /opt/ros/foxy/setup.bash && echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 
+                sudo apt-get install -y python3-testresources python-launchpadlib
                 sudo apt install python3-pip -y
-                pip install --user -U empy pyros-genmsg
+                pip install --user -U pyros-genmsg
                 pip install --user setuptools==58.2.0
                 pip install empy==3.3.4
                 pip install -U colcon-common-extensions
@@ -89,8 +90,9 @@ if [ -f /etc/os-release ]; then
                 sudo apt install ros-dev-tools -y
                 source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
+                sudo apt-get install -y python3-testresources python-launchpadlib
                 sudo apt install python3-pip -y
-                pip install --user -U empy pyros-genmsg
+                pip install --user -U pyros-genmsg
                 pip install --user setuptools==58.2.0
                 pip install empy==3.3.4
                 pip install -U colcon-common-extensions
