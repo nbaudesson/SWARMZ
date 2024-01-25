@@ -61,6 +61,17 @@ source install/setup.bash
 ros2 launch acoustics_simulation_py acoustics_bringup.launch.py scenario:=1
 ```
 
+To visualize the sound received by each drones, you can use the plotjuggler tool to plot the the simulated data as time series. Plotjuggler subscribe to ros2 topics, so first you need to launch a scenario with acoustics_simulation_py and then select microphone topic `/px4_*/fmu/in/mono_sound_sensor`
+```bash
+ros2 run plotjuggler plotjuggler
+```
+![plottuto1](doc/images/11.jpg)
+Then import plot layout.
+![plottuto2](doc/images/12.jpg)
+Then select the mono sound sensor topics, you can use the filter to find them faster.
+![plottuto3](doc/images/13.jpg)
+
+
 ***To run the simulation manually***
 
 You need 13 terminals are needed.
@@ -92,5 +103,3 @@ ros2 launch acoustics_simulation_py acoustics_bringup.launch.py
 ```bash
 ros2 run plotjuggler plotjuggler
 ```
-
-

@@ -1,33 +1,9 @@
 #!/bin/bash
 sudo apt install -y build-essential
-# # You need at least python 3.10 for numpy dependencies
-# desired_python_version="3.10"
-# # Get the installed Python version
-# installed_python_version=$(python3 --version 2>&1 | awk '{print $2}' | cut -d'.' -f1,2)
-# # Compare the versions
-# if [[ "$(printf "%s\n" "$desired_python_version" "$installed_python_version" | sort -V | head -n 1)" == "$desired_python_version" ]]; then
-#     echo "Python $desired_python_version or above is already installed."
-# else
-#     echo "Installing Python 3.11..."
-#     sudo apt update
-#     sudo apt install software-properties-common -y
-#     sudo add-apt-repository ppa:deadsnakes/ppa
-#     sudo apt update
-#     sudo apt install python3.11 -y
-#     # ln -s /usr/bin/python3.11 /usr/bin/python
-#     sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
-#     sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python$installed_python_version 2
-#     sudo update-alternatives --config python3
-#     sudo apt install python-is-python3 -y
-#     sudo apt-get install curl -y
-#     sudo apt-get install -y python3-testresources python3-launchpadlib
-#     curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11
-# fi
 # Check if the system is running Ubuntu
 if [ -f /etc/os-release ]; then
     # Source the os-release file
     . /etc/os-release
-
     # Check if it is Ubuntu and the version is either 20.04 or 22.04
     if [ "$ID" = "ubuntu" ] && ( [ "$VERSION_ID" = "20.04" ] || [ "$VERSION_ID" = "22.04" ] ); then
         echo "The system is running Ubuntu $VERSION_ID"
@@ -152,7 +128,6 @@ cp map/swarmzmap.sdf PX4-Autopilot/Tools/simulation/gz/worlds/default.sdf
 
 ### buld ROS2 workspace ###
 cd SwarmZ_ROS2
-
 
 ### ros2 px4 offboard control ### github to pilot drone with velocity
 # git clone https://github.com/ARK-Electronics/ROS2_PX4_Offboard_Example.git
