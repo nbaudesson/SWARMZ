@@ -65,11 +65,11 @@ To visualize the sound received by each drones, you can use the plotjuggler tool
 ```bash
 ros2 run plotjuggler plotjuggler
 ```
-![plottuto1](doc/images/plotjuggler/11.jpg)
+![plottuto1](doc/images/plotjuggler/11.png)
 Then import plot layout.
-![plottuto2](doc/images/plotjuggler/12.jpg)
+![plottuto2](doc/images/plotjuggler/12.png)
 Then select the mono sound sensor topics, you can use the filter to find them faster.
-![plottuto3](doc/images/plotjuggler/13.jpg)
+![plottuto3](doc/images/plotjuggler/13.png)
 
 
 ***To run the simulation manually***
