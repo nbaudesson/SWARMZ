@@ -112,11 +112,13 @@ class GenerateSounds(Node):
 
                     # Check if the sound of the explosion has had the time to reach the drone
                     if (count_time_explosion/(1/self.timer) >= drone_distance_to_explosion/SPEED_OF_SOUND):
+                        # Phasing explosion sound generation
+                        phased_count_time_explosion = count_time_explosion - drone_distance_to_explosion/SPEED_OF_SOUND
                         explosion_noise = self.calculate_source_explosion(self.NOISES["explosion_noise"]["amplitude"],
                                                                         self.NOISES["explosion_noise"]["phase"],
                                                                         self.NOISES["explosion_noise"]["frequency"],
                                                                         drone_distance_to_explosion,
-                                                                        count_time_explosion,
+                                                                        phased_count_time_explosion,
                                                                         self.EXPLOSIONS[e]["lenght"])
                     else:
                         explosion_noise = 0          
