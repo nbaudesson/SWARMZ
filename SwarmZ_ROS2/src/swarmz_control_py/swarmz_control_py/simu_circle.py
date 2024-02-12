@@ -3,9 +3,6 @@ import rclpy
 from rclpy.node import Node
 import subprocess
 import time
-import sys
-import argparse
-import atexit
 import os
 import signal
 

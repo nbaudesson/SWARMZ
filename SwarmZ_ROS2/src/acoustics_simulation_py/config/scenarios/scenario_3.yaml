@@ -1,13 +1,27 @@
+# [
+#   {"lat": 43.134440196,   # deg
+#   "lon": 6.014446919,     # deg
+#   "alt": 6.0,         # Height above mean sea (m)
+#   "start_time": 30,   # (s)
+#   "lenght": 0.5},      # (s)
+
+#   {"lat": 43.134799935,   # deg CHANGE
+#   "lon": 6.015526611,     # deg CHANGE
+#   "alt": 6.0,         # Height above mean sea (m)
+#   "start_time": 30,   # (s)
+#   "lenght": 0.5},      # (s)
+# ]
+
 [
   {"lat": 43.134440196,   # deg
   "lon": 6.014446919,     # deg
   "alt": 6.0,         # Height above mean sea (m)
-  "start_time": 30,   # (s)
-  "lenght": 10},      # (s)
+  "start_time": 10,   # (s)
+  "lenght": 0.5},      # (s)
 
   {"lat": 43.134799935,   # deg CHANGE
   "lon": 6.015526611,     # deg CHANGE
   "alt": 6.0,         # Height above mean sea (m)
-  "start_time": 30,   # (s)
-  "lenght": 10},      # (s)
+  "start_time": 10,   # (s)
+  "lenght": 0.5},      # (s)
 ]

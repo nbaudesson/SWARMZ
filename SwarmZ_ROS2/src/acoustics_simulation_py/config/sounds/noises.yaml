@@ -1,26 +1,20 @@
 {
-  "motor_noise":
+  "motor_noise": # 70 dB
     {
-    "amplitude_1":  5,    # main signal
-    "amplitude_3": 0,     # harmonics
-    "frequency": 100,     # Hz
-    "phase_1": 0,
-    "phase_3": 0
+    "amplitude":  3162.28,    # main signal
+    "frequency": 80.6,     # Hz
+    "phase": 0
     },
-  "white_noise":
+  "white_noise": # Is actually ambiant noise 40 dB
     {
-    "amplitude_1":  1,    # main signal
-    "amplitude_3": 0,     # harmonics
+    "amplitude":  100,    # main signal
     "frequency": 100,     # Hz
-    "phase_1": 0,
-    "phase_3": 0
+    "phase": 0
     },
-  "explosion_noise":
+  "explosion_noise": # 130dB
     {
-    "amplitude_1":  100,  # main signal
-    "amplitude_3": 0,     # harmonics
-    "frequency": 100,     # Hz
-    "phase_1": 0,
-    "phase_3": 0
+    "amplitude":  3162277.66,  # main signal A=10^(L/20)
+    "frequency": 35,     # Hz
+    "phase": 0
     }
 }

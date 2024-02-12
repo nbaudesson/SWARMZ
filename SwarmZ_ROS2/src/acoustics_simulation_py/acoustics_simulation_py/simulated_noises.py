@@ -94,32 +94,36 @@ class GenerateSounds(Node):
             simulated_noise=0
 
             # Calculate background noise noise perceived by drone i
-            self.white_noise = self.calculate_source_motor(self.NOISES["white_noise"]["amplitude_1"], self.NOISES["white_noise"]["amplitude_3"],
-                                                           self.NOISES["white_noise"]["phase_1"], self.NOISES["white_noise"]["phase_3"],
+            self.white_noise = self.calculate_source_motor(self.NOISES["white_noise"]["amplitude"],
+                                                           self.NOISES["white_noise"]["phase"],
                                                            self.NOISES["white_noise"]["frequency"], 1)
             simulated_noise += self.white_noise
 
-            # Calculate noise from each explosion perceived by drone i
+            # Calculate noise of each explosion perceived by drone i
             explosions_noise = 0
             for e in range(len(self.EXPLOSIONS)):
-                if ((self.count_time >= self.EXPLOSIONS[e]["start_time"]) and (self.count_time <= (self.EXPLOSIONS[e]["start_time"] + self.EXPLOSIONS[e]["lenght"]))):
+                # if ((self.count_time >= self.EXPLOSIONS[e]["start_time"]) and (self.count_time <= (self.EXPLOSIONS[e]["start_time"] + self.EXPLOSIONS[e]["lenght"]))): # Stop the explosion sound after given lenght
+                if ((self.count_time >= self.EXPLOSIONS[e]["start_time"])):
                     count_time_explosion = self.count_time - self.EXPLOSIONS[e]["start_time"]
 
                     # Calculate the distance between the drones and the explosion
                     drone_distance_to_explosion = self.calculate_distance(self.pos_gps[i]["lat"], self.pos_gps[i]["lon"], self.pos_gps[i]["alt"],
-                                                                        self.EXPLOSIONS[e]["lat"], self.EXPLOSIONS[e]["lon"], self.EXPLOSIONS[e]["alt"])
-                    
-                    if count_time_explosion % int(self.EXPLOSIONS[e]["lenght"]/ 2) == 0:
-                        print("d",i,"to e",e,"=", round(drone_distance_to_explosion, 2))
+                                                                          self.EXPLOSIONS[e]["lat"], self.EXPLOSIONS[e]["lon"], self.EXPLOSIONS[e]["alt"])
 
-                    # Hoang-Anh need to explain this !
-                    # if (self.EXPLOSIONS[e]["lenght"]/count_time_explosion >= drone_distance_to_explosion/SPEED_OF_SOUND):
-                    # if (count_time_explosion/10 >= drone_distance_to_explosion/SPEED_OF_SOUND):
+                    # Check if the sound of the explosion has had the time to reach the drone
+                    if (count_time_explosion/(1/self.timer) >= drone_distance_to_explosion/SPEED_OF_SOUND):
+                        explosion_noise = self.calculate_source_explosion(self.NOISES["explosion_noise"]["amplitude"],
+                                                                        self.NOISES["explosion_noise"]["phase"],
+                                                                        self.NOISES["explosion_noise"]["frequency"],
+                                                                        drone_distance_to_explosion,
+                                                                        count_time_explosion,
+                                                                        self.EXPLOSIONS[e]["lenght"])
+                    else:
+                        explosion_noise = 0          
 
-                    explosion_noise = self.calculate_source_explosion(self.NOISES["explosion_noise"]["amplitude_1"], self.NOISES["explosion_noise"]["amplitude_3"],
-                                                                      self.NOISES["explosion_noise"]["phase_1"], self.NOISES["explosion_noise"]["phase_3"],
-                                                                      self.NOISES["explosion_noise"]["frequency"], drone_distance_to_explosion,
-                                                                      count_time_explosion, self.EXPLOSIONS[e]["lenght"])
+                    if count_time_explosion == 1:
+                        self.get_logger().info('d %s to e %s = %s' % (str(i), str(e), str(round(drone_distance_to_explosion, 2))))
+                        # print("d",i,"to e",e,"=", round(drone_distance_to_explosion, 2))
 
                     explosions_noise += explosion_noise
 
@@ -130,9 +134,10 @@ class GenerateSounds(Node):
                 # distance to self case
                 if i == j:
                     drone_distance_to_drones[i][j] = 1
-                    motor_noise_from_drones[i][j] = self.calculate_source_motor(self.NOISES["motor_noise"]["amplitude_1"], self.NOISES["motor_noise"]["amplitude_3"],
-                                                                                self.NOISES["motor_noise"]["phase_1"], self.NOISES["motor_noise"]["phase_3"],
-                                                                                self.NOISES["motor_noise"]["frequency"], drone_distance_to_drones[i][j])
+                    motor_noise_from_drones[i][j] = self.calculate_source_motor(self.NOISES["motor_noise"]["amplitude"],
+                                                                                self.NOISES["motor_noise"]["phase"],
+                                                                                self.NOISES["motor_noise"]["frequency"],
+                                                                                drone_distance_to_drones[i][j])
                     motor_noise_from_drones[i][j] = 0
                     
                 # If calculus has been made in one way, copy the result for the other way
@@ -143,12 +148,13 @@ class GenerateSounds(Node):
                 # Calculate the distance between the drones
                 else:
                     drone_distance_to_drones[i][j] = self.calculate_distance(self.pos_gps[i]["lat"], self.pos_gps[i]["lon"], self.pos_gps[i]["alt"],
-                                                                         self.pos_gps[j]["lat"], self.pos_gps[j]["lon"], self.pos_gps[j]["alt"])
+                                                                             self.pos_gps[j]["lat"], self.pos_gps[j]["lon"], self.pos_gps[j]["alt"])
 
                     
-                    motor_noise_from_drones[i][j] = self.calculate_source_motor(self.NOISES["motor_noise"]["amplitude_1"], self.NOISES["motor_noise"]["amplitude_3"],
-                                                                                self.NOISES["motor_noise"]["phase_1"], self.NOISES["motor_noise"]["phase_3"],
-                                                                                self.NOISES["motor_noise"]["frequency"], drone_distance_to_drones[i][j])
+                    motor_noise_from_drones[i][j] = self.calculate_source_motor(self.NOISES["motor_noise"]["amplitude"],
+                                                                                self.NOISES["motor_noise"]["phase"],
+                                                                                self.NOISES["motor_noise"]["frequency"],
+                                                                                drone_distance_to_drones[i][j])
 
                 simulated_noise += motor_noise_from_drones[i][j]
 
@@ -156,51 +162,69 @@ class GenerateSounds(Node):
             self.source_pub["source_0%d_publisher" % i].publish(Float32(data=simulated_noise))
 
         # Print every 5 seconds
-        if self.count_time % 5 == 0:
+        if self.count_time % 10 == 0:
             rounded_distances = {
                 drone: {key: "{:.2f}".format(round(value, 2)) for key, value in distance.items()}
                 for drone, distance in drone_distance_to_drones.items()}
             rounded_noises = {
                 drone: {key: "{:.2f}".format(round(value, 2)) for key, value in noise.items()}
                 for drone, noise in motor_noise_from_drones.items()}
-            print("Distances")
-            for drone, distance in rounded_distances.items():
-                print(str(drone) + ": " + str(distance))
-            print("Noises")
-            for drone, noise in rounded_noises.items():
-                print(str(drone) + ": " + str(noise))
-            print()
 
-        # Timer reset time, 2 min after last interesting thing happened
+            self.get_logger().info("Distances")
+            for drone, distance in rounded_distances.items():
+                self.get_logger().info('%s: %s' % (str(drone), str(distance)))
+            # print("Noises")
+            # for drone, noise in rounded_noises.items():
+            #     print(str(drone) + ": " + str(noise))
+            
+        # Timer reset time, 1 min after last interesting thing happened
         if len(self.EXPLOSIONS)>0:
-            if self.EXPLOSIONS[self.max_index]["start_time"] + self.EXPLOSIONS[self.max_index]["lenght"] + 2 * 60 <=  self.count_time: 
+            if self.EXPLOSIONS[self.max_index]["start_time"] + self.EXPLOSIONS[self.max_index]["lenght"] + 1 * 60 <=  self.count_time: 
                 self.count_time = 0
 
-    def calculate_source_explosion(self, amplitude_source_1, amplitude_source_3,
-                                   phase_source_1, phase_source_3,
+
+    def calculate_source_explosion(self, amplitude_source, phase_source,
                                    frequency, dist_source2robot,
                                    count_time_explosion, explosion_lenght):
-        delta_phase_1 = 2 * PI * dist_source2robot * frequency / SPEED_OF_SOUND
-        delta_phase_3 = 2 * PI * dist_source2robot * 3 * frequency / SPEED_OF_SOUND
+        delta_phase = 2 * PI * dist_source2robot * frequency / SPEED_OF_SOUND
 
-        return (1 / (dist_source2robot * dist_source2robot) * math.exp(-count_time_explosion / explosion_lenght)
-            * self.generate_sinwave(amplitude_source_1, frequency, phase_source_1, delta_phase_1, amplitude_source_3, frequency, phase_source_3, delta_phase_3, self.count_time)
+        return (1 / (dist_source2robot * dist_source2robot) 
+                * math.exp(-count_time_explosion / explosion_lenght) # Reduce the noise exponentially over the given duration of sound
+                * self.generate_complex_wave(amplitude_source, frequency, phase_source, delta_phase,self.count_time)
                )
 
-    def calculate_source_motor(self, amplitude_source_1, amplitude_source_3,
-                               phase_source_1, phase_source_3,
+    def calculate_source_motor(self, amplitude_source, phase_source, 
                                frequency, dist_source2robot):
-        delta_phase_1 = 2 * PI * dist_source2robot * frequency / SPEED_OF_SOUND
-        delta_phase_3 = 2 * PI * dist_source2robot * 3 * frequency / SPEED_OF_SOUND
+        delta_phase = 2 * PI * dist_source2robot * frequency / SPEED_OF_SOUND
 
         return ((1 / (dist_source2robot * dist_source2robot)) 
-            * self.generate_sinwave(amplitude_source_1, frequency, phase_source_1, delta_phase_1, amplitude_source_3, frequency, phase_source_3, delta_phase_3, self.count_time)
+                * self.generate_complex_wave(amplitude_source, frequency, phase_source, delta_phase, self.count_time)
                )
 
-    def generate_sinwave(self, a1, f1, p1, d1, a3, f3, p3, d3, t):
-        # Amplitude*sin(2*pi*frequency*time+phase+deltaphase)
-        return (a1 * math.sin(2 * PI * f1 * t + p1 + d1)  # Signal
-              + a3 * math.sin(2 * PI * f3 * t + p3 + d3)) # Harmonics
+    def generate_complex_wave(self, amplitude, frequency, phase, delta_phase, t):
+        """
+        Generate a complex wave signal composed of a fundamental frequency and its harmonics.
+        Amplitude*sin(2*pi*frequency*time+phase+deltaphase)
+
+        Parameters:
+            amplitudes : amplitude for the fundamental frequency.
+            frequency : Frequency for the fundamental frequency.
+            phases : Phase for the fundamental frequency.
+            delta_phases : Delta phase for the fundamental frequency.
+            t (float): Time variable.
+
+        Returns:
+            float: The value of the complex wave signal at time t.
+        """
+        harmonics = 3
+        amplitudes = [amplitude] + [amplitude/2] * harmonics  # Amplitude of 1 for fundamental and 0.5 for each harmonic
+        frequencies = [frequency * (i + 1) for i in range(harmonics + 1)]  # Fundamental and harmonics frequencies
+        phase = [0] * (harmonics + 1)  # Zero phase for all components
+        delta_phase = [0] * (harmonics + 1)  # Zero delta phase for all components
+        complex_wave = 0
+        for i in range(len(amplitudes)):
+            complex_wave += amplitudes[i] * math.sin(2 * PI * frequencies[i] * t + phase[i] + delta_phase[i])
+        return complex_wave
 
     def calculate_distance(self, lat1, lon1, alt1, lat2, lon2, alt2):
         # Function to calculate the distance using Vincenty formula
@@ -226,7 +250,7 @@ class GenerateSounds(Node):
         distance = R * c
         
         # Correct for altitude
-        distance = math.sqrt(distance * distance + dalt ** 2)
+        # distance = math.sqrt(distance * distance + dalt ** 2)
 
         return distance
 

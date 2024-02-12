@@ -1,13 +1,20 @@
+# [
+#   {"lat": 43.13471,   # deg
+#   "lon": 6.01507,     # deg
+#   "alt": 6.0,         # Height above mean sea (m)
+#   "start_time": 5,   # (s)
+#   "lenght": 0.5},
+
+#   {"lat": 43.13471,   # deg
+#   "lon": 6.01507,     # deg
+#   "alt": 6.0,         # Height above mean sea (m)
+#   "start_time": 30,   # (s)
+#   "lenght": 0.5},      # (s)
+# ]
 [
   {"lat": 43.13471,   # deg
   "lon": 6.01507,     # deg
   "alt": 6.0,         # Height above mean sea (m)
-  "start_time": 30,   # (s)
-  "lenght": 10},
-
-  {"lat": 43.13471,   # deg
-  "lon": 6.01507,     # deg
-  "alt": 6.0,         # Height above mean sea (m)
-  "start_time": 60,   # (s)
-  "lenght": 10},      # (s)
+  "start_time": 5,   # (s)
+  "lenght": 0.5},
 ]

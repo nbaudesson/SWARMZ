@@ -29,7 +29,7 @@ def generate_launch_description():
         executable="simulated_noises",
         name="simulated_noises_py",
         output="screen",
-        parameters=[{"scenario": 1,
+        parameters=[{"scenario": scenario,
                      "nb_of_drones": nb_of_drones,
                    }],
     )
