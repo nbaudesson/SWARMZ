@@ -98,7 +98,7 @@
           <geometry>
             <plane>
               <normal>0 0 1</normal>
-              <size>124 73</size>
+              <size>73 124</size>
             </plane>
           </geometry>
           <material>
@@ -154,7 +154,7 @@
               <layer>0</layer>
             </meta>
           </visual>
-          <pose>62 0 0 0 -0 -1.5708</pose>
+          <pose>0 62 0 0 -0 0</pose>
         </link>
         <link name='Wall_5'>
           <collision name='Wall_5_Collision'>
@@ -183,7 +183,7 @@
               <layer>0</layer>
             </meta>
           </visual>
-          <pose>0 36.5 0 0 -0 0</pose>
+          <pose>36.5 0 0 0 -0 -1.5708</pose>
         </link>
         <link name='Wall_7'>
           <collision name='Wall_7_Collision'>
@@ -212,7 +212,7 @@
               <layer>0</layer>
             </meta>
           </visual>
-          <pose>0 -36.5 0 0 -0 0</pose>
+          <pose>-36.5 0 0 0 -0 -1.5708</pose>
         </link>
         <link name='Wall_9'>
           <collision name='Wall_9_Collision'>
@@ -241,7 +241,7 @@
               <layer>0</layer>
             </meta>
           </visual>
-          <pose>-62 0 0 0 -0 -1.5708</pose>
+          <pose>0 -62 0 0 -0 0</pose>
         </link>
         <static>1</static>
       </model>

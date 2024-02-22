@@ -22,6 +22,18 @@ def generate_launch_description():
         "px4",
         default_value="../PX4-Autopilot",
         description="PX4-Autopilot directory path")
+        
+    spawn_x = LaunchConfiguration("spawn_x")
+    spawn_x_cmd = DeclareLaunchArgument(
+        "spawn_x",
+        default_value="0.0",
+        description="Offset on x axis of PX4 Home")
+    
+    spawn_y = LaunchConfiguration("spawn_y")
+    spawn_y_cmd = DeclareLaunchArgument(
+        "spawn_y",
+        default_value="0.0",
+        description="Offset on y axis of PX4 Home")
 
     latitude = LaunchConfiguration("lat")
     latitude_cmd = DeclareLaunchArgument(
@@ -45,31 +57,34 @@ def generate_launch_description():
     # NODES
     #
     
-    # simu_node=Node(
-    #         package='swarmz_control',
-    #         namespace='px4_offboard',
-    #         executable='simu_processes',
-    #         name='simu_processes',
-    #         prefix='gnome-terminal --',
-    #         parameters=[{"d": number_of_drones,
-    #                      "px4": px4_path,
-    #                      "lat": latitude,
-    #                      "lon": longitude,
-    #                      "alt": altitude}]
-    #     )
-
     simu_node=Node(
-        package='swarmz_control_py',
-        namespace='px4_offboard',
-        executable='simu_circle',
-        name='simu_circle',
-        # prefix='gnome-terminal --',
-        parameters=[{"headless": headless,
+            package='swarmz_control_py',
+            namespace='px4_offboard',
+            executable='simu_processes',
+            name='simu_processes',
+            # prefix='gnome-terminal --',
+            parameters=[{"headless": headless,
+                        "drones": NB_OF_DRONES,
                         "px4": px4_path,
+                        "spawn_x": spawn_x,
+                        "spawn_y": spawn_y,
                         "lat": latitude,
                         "lon": longitude,
                         "alt": altitude}]
-    )
+        )
+
+    # simu_node=Node(
+    #     package='swarmz_control_py',
+    #     namespace='px4_offboard',
+    #     executable='simu_circle',
+    #     name='simu_circle',
+    #     # prefix='gnome-terminal --',
+    #     parameters=[{"headless": headless,
+    #                     "px4": px4_path,
+    #                     "lat": latitude,
+    #                     "lon": longitude,
+    #                     "alt": altitude}]
+    # )
 
     offboard_control_nodes=[]
     for i in range(1, NB_OF_DRONES+1, 1):

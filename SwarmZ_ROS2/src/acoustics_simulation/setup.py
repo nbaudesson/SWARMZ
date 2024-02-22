@@ -2,7 +2,7 @@ import os
 from glob import glob
 from setuptools import find_packages, setup
 
-package_name = 'acoustics_simulation_py'
+package_name = 'acoustics_simulation'
 
 setup(
     name=package_name,
@@ -24,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'simulated_noises = acoustics_simulation_py.simulated_noises:main'
+            'simulated_noises = acoustics_simulation.simulated_noises:main'
         ],
     },
 )

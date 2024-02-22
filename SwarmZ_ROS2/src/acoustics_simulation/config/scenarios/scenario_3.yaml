@@ -1,0 +1,13 @@
+[
+  {"lat": 43.13443701,   # deg
+  "lon": 6.01433029,     # deg
+  "alt": 6.0,         # Height above mean sea (m)
+  "start_time": 30,   # (s)
+  "lenght": 0.5},      # (s)
+
+  {"lat": 43.13479891,   # deg CHANGE
+  "lon": 6.01568572,     # deg CHANGE
+  "alt": 6.0,         # Height above mean sea (m)
+  "start_time": 30,   # (s)
+  "lenght": 0.5},      # (s)
+]

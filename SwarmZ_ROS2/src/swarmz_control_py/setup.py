@@ -28,6 +28,7 @@ setup(
             'simu_circle = '+package_name+'.simu_circle:main',
             'offboard_control_py = '+package_name+'.offboard_control:main',
             'mission_control = '+package_name+'.mission_control:main',
+            'tight_circle = '+package_name+'.tight_circle:main',
         ],
     },
 )

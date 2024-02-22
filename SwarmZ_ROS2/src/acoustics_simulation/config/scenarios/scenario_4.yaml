@@ -1,39 +1,39 @@
 [
   # SOURCE 1
-  {"lat": 43.134440196,   # deg CHANGE
-  "lon": 6.014654613,     # deg CHANGE
+  {"lat": 43.13443953,   # deg CHANGE
+  "lon": 6.01457683,     # deg CHANGE
   "alt": 6.0,         # Height above mean sea (m)
   "start_time": 10,   # (s)
   "lenght": 10},      # (s)
 
-  {"lat": 43.134440196,   # deg CHANGE
-  "lon": 6.014509227,     # deg CHANGE
+  {"lat": 43.13443903,   # deg CHANGE
+  "lon": 6.01449040,     # deg CHANGE
   "alt": 6.0,         # Height above mean sea (m)
   "start_time": 15,   # (s)
   "lenght": 10},      # (s)
 
-  {"lat": 43.134553963,   # deg CHANGE
-  "lon": 6.014504671,     # deg CHANGE
+  {"lat": 43.13449557,   # deg CHANGE
+  "lon": 6.01445378,     # deg CHANGE
   "alt": 6.0,         # Height above mean sea (m)
   "start_time": 25,   # (s)
   "lenght": 10},      # (s)
 
   # SOURCE 2
-  {"lat": 43.134710000,   # deg CHANGE
-  "lon": 6.01524987,     # deg CHANGE
+  {"lat": 43.13470803,   # deg CHANGE
+  "lon": 6.01531641,     # deg CHANGE
   "alt": 6.0,         # Height above mean sea (m)
   "start_time": 15,   # (s)
   "lenght": 10},      # (s)
 
   # SOURCE 3
-  {"lat": 43.134889870,   # deg CHANGE
-  "lon": 6.014773311,     # deg CHANGE
+  {"lat": 43.13488823,   # deg CHANGE
+  "lon": 6.01468785,     # deg CHANGE
   "alt": 6.0,         # Height above mean sea (m)
   "start_time": 20,   # (s)
   "lenght": 10},      # (s)
 
-  {"lat": 43.134889870,   # deg CHANGE
-  "lon": 6.014773311,     # deg CHANGE
+  {"lat": 43.13488823,   # deg CHANGE
+  "lon": 6.01468785,     # deg CHANGE
   "alt": 6.0,         # Height above mean sea (m)
   "start_time": 25,   # (s)
   "lenght": 10},      # (s)

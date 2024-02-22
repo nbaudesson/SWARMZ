@@ -11,9 +11,9 @@
     "frequency": 100,     # Hz
     "phase": 0
     },
-  "explosion_noise": # 130dB
+  "explosion_noise": # 140dB
     {
-    "amplitude":  3162277.66,  # main signal A=10^(L/20)
+    "amplitude":  10000000,  # main signal A=10^(L/20)
     "frequency": 35,     # Hz
     "phase": 0
     }
