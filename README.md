@@ -52,13 +52,13 @@ ros2 launch swarmz_control_py SwarmZ_simu.launch.py headless:=1
 ```bash
 cd SwarmZ_ROS2
 source install/setup.bash
-ros2 launch acoustics_simulation_py acoustics_bringup.launch.py
+ros2 launch acoustics_simulation acoustics_bringup.launch.py
 ```
 There are 5 scenarios that you can select the scenario with the scenario parameter:
 ```bash
 cd SwarmZ_ROS2
 source install/setup.bash
-ros2 launch acoustics_simulation_py acoustics_bringup.launch.py scenario:=1
+ros2 launch acoustics_simulation acoustics_bringup.launch.py scenario:=1
 ```
 
 To visualize the sound received by each drones, you can use the plotjuggler tool to plot the the simulated data as time series. Plotjuggler subscribe to ros2 topics, so first you need to launch a scenario with acoustics_simulation_py and then select microphone topic `/px4_*/fmu/in/mono_sound_sensor`
@@ -96,7 +96,7 @@ ros2 run swarmz_control_py offboard_control_py
 **4.** 1 to run the acoustic simulation node to publish the sound topic of each drone in ROS2
 ```bash
 source install/setup.bash
-ros2 launch acoustics_simulation_py acoustics_bringup.launch.py
+ros2 launch acoustics_simulation acoustics_bringup.launch.py
 ```
 
 **5.** 1 to run the data plotter
