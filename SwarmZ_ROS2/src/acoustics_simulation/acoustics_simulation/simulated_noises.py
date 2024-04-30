@@ -22,11 +22,11 @@ class GenerateSounds(Node):
 
         self.declare_parameter("scenario", 1)
         self.scenario = self.get_parameter("scenario").get_parameter_value().integer_value
-        scenario_path = "src/acoustics_simulation_py/config/scenarios/scenario_"+str(self.scenario)+".yaml"      
+        scenario_path = "src/acoustics_simulation/config/scenarios/scenario_"+str(self.scenario)+".yaml"      
         with open(scenario_path, 'r') as file:
             self.EXPLOSIONS = yaml.safe_load(file)
 
-        self.declare_parameter("noises", "src/acoustics_simulation_py/config/sounds/noises.yaml")
+        self.declare_parameter("noises", "src/acoustics_simulation/config/sounds/noises.yaml")
         self.noises = self.get_parameter("noises").get_parameter_value().string_value        
         with open(self.noises, 'r') as file:
             self.NOISES = yaml.safe_load(file)

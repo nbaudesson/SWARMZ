@@ -100,6 +100,8 @@ def generate_launch_description():
 
     ld.add_action(headless_cmd)
     ld.add_action(px4_path_cmd)
+    ld.add_action(spawn_x_cmd)
+    ld.add_action(spawn_y_cmd)
     ld.add_action(latitude_cmd)
     ld.add_action(longitude_cmd)
     ld.add_action(altitude_cmd)

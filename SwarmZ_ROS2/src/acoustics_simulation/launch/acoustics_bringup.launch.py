@@ -25,7 +25,7 @@ def generate_launch_description():
     # NODES
     #
     simulated_noises_cmd = Node(
-        package="acoustics_simulation_py",
+        package="acoustics_simulation",
         executable="simulated_noises",
         name="simulated_noises_py",
         output="screen",
